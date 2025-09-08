@@ -5,7 +5,7 @@ const talkButton = document.querySelector(".work__button");
 
 talkButton.addEventListener("click", () => {
   modal.style.display = "block";
-  document.body.classList.add("body--no-scroll"); // блокируем скролл
+  document.body.classList.add("body--no-scroll");
 });
 
 modalClose.addEventListener("click", () => {
