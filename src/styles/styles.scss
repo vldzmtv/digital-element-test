@@ -1,0 +1,39 @@
+@use "blocks/header";
+@use "blocks/catalog";
+@use "blocks/clients";
+@use "blocks/work";
+@use "blocks/footer";
+
+
+@font-face {
+  font-family: 'Galien';
+  src: url("../fonts/Galien-Bold.woff2") format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-Regular.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-SemiBold.woff2") format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin:  0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1260px;
+  width: 100%;
+  margin: 0 auto;
+}

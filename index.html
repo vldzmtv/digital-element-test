@@ -13,8 +13,352 @@
   <title>Document</title>
 </head>
 <body>
+<svg style="display: none;">
+  <symbol
+    id="logo"
+    viewBox="0 0 48 48"
+  >
+    <g clip-path="url(#clip0_1_283)">
+      <circle
+        cx="16"
+        cy="24"
+        r="16"
+        fill="#316099"
+      />
+      <circle
+        cx="32"
+        cy="24"
+        r="15"
+        fill="white"
+        stroke="#316099"
+        stroke-width="2"
+      />
+      <path
+        d="M39.3 30L34.38 16H30.96L26.06 30H29.04L29.88 27.48H35.46L36.3 30H39.3ZM32.68 19.18L34.6 24.9H30.76L32.68 19.18Z"
+        fill="#316099"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1_283">
+        <rect
+          width="48"
+          height="48"
+          fill="white"
+          transform="matrix(1 0 0 -1 0 48)"
+        />
+      </clipPath>
+    </defs>
+  </symbol>
+</svg>
+<svg style="display: none;">
+  <symbol
+    id="logo-blue"
+    viewBox="0 0 48 48"
+  >
+    <g clip-path="url(#clip0_1_524)">
+      <circle
+        cx="16"
+        cy="24"
+        r="16"
+        fill="#98C3E8"
+      />
+      <circle
+        cx="32"
+        cy="24"
+        r="15"
+        fill="white"
+        stroke="#316099"
+        stroke-width="2"
+      />
+      <path
+        d="M38.3 31L33.38 17H29.96L25.06 31H28.04L28.88 28.48H34.46L35.3 31H38.3ZM31.68 20.18L33.6 25.9H29.76L31.68 20.18Z"
+        fill="#316099"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1_524">
+        <rect
+          width="48"
+          height="48"
+          fill="white"
+          transform="matrix(1 0 0 -1 0 48)"
+        />
+      </clipPath>
+    </defs>
+</svg>
+</symbol>
+</svg>
+<svg style="display: none;">
+  <symbol
+    id="arrow"
+    viewBox="0 0 48 48"
+  >
+    <path
+      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+      fill="#5A98D0"
+    />
+  </symbol>
+</svg>
 
-<script type="module" src="./src/js/main.js"></script>
+<div class="hero">
+  <header class="header">
+    <div class="header__inner container">
+      <nav class="header__navigation">
+        <a
+          class="header__logo"
+        >
+          <svg
+            class="header__image"
+            aria-label="Company logo"
+          >
+            <use href="#logo"></use>
+          </svg>
+        </a>
+        <div class="header__burger">
+          <button
+            class="header__button"
+            type="button"
+            aria-label="Open menu"
+            data-button="menu"
+          >
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero__content  container">
+    <div class="hero__container">
+      <div class="hero__info">
+        <h1 class="hero__info__title">New Automation Tool for Your Home</h1>
+        <p class="hero__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
+        <button
+          class="hero__button"
+          type="button"
+        >
+          See our project
+        </button>
+      </div>
+      <div class="hero__illustration">
+        <img
+          src="./src/assets%20/illustration.svg"
+          alt=""
+        >
+      </div>
+    </div>
+  </section>
+</div>
+<section class="catalog ">
+  <div class="catalog__container ">
+    <h2 class="catalog__title">What we do to help our client grow in digital era,</h2>
+    <ul class="catalog__list">
+      <li class="catalog__item card card__business">
+        <div class="card__wrapper">
+          <img
+            src="src/assets%20/business.svg"
+            class="card__image-business"
+          >
+          <h3 class="card__title">Make Your business To Be
+            Better Famous In Internet
+          </h3>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a
+            class="card__link"
+            href="#noscroll"
+          >
+            <span class="card__link-text">Learn more</span>
+            <svg class="card__link-icon">
+              <use href="#arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="catalog__item card card__technology">
+        <div class="card__wrapper">
+          <img
+            src="src/assets%20/technology.svg"
+            class="card__image card__image-technology"
+          >
+          <h3 class="card__title">Bring Technology To Your Comfrotable Home
+          </h3>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a
+            class="card__link"
+            href="#"
+          >
+            <span class="card__link-text">Learn more</span>
+            <svg class="card__link-icon">
+              <use href="#arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="catalog__item card card__product">
+        <div class="card__wrapper">
+          <img
+            src="src/assets%20/product.svg"
+            class="card__image-product"
+          >
+          <h3 class="card__title">Build Your Digital Product That Suitable For Your Need
+          </h3>
+          <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a
+            class="card__link"
+            href="#"
+          >
+            <span class="card__link-text">Learn more</span>
+            <svg class="card__link-icon">
+              <use href="#arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="clients">
+  <div class="clients__container">
+    <header class="clients__header">
+      <h2 class="clients__header-title">Our Beloved Client</h2>
+      <p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </header>
+    <ul class="clients__list">
+      <li class="clients__list-item">LOGO CLIENT 1</li>
+      <li class="clients__list-item">LOGO CLIENT 2</li>
+      <li class="clients__list-item">LOGO CLIENT 3</li>
+      <li class="clients__list-item">LOGO CLIENT 4</li>
+      <li class="clients__list-item">LOGO CLIENT 5</li>
+      <li class="clients__list-item">LOGO CLIENT 6</li>
+      <li class="clients__list-item">LOGO CLIENT 7</li>
+      <li class="clients__list-item">
+        <a
+          href=""
+          class="clients__link"
+        >More Client
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<section class="work">
+  <div class="work__container">
+    <div class="work__info">
+      <h2 class="work__title">Intersted to woek with our team?</h2>
+      <p class="work__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+    </div>
+    <div class="work__button-talk">
+      <button
+        class="work__button"
+        type="button"
+      >Let's Talk
+      </button>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__navigation">
+      <div class="footer__navigation-block footer__block-company company">
+        <a class="footer__company-link">
+          <svg class="footer__company-image">
+            <use href="#logo-blue"></use>
+          </svg>
+          <span class="company__name">Afrianska</span>
+        </a>
+        <ul class="footer__company-list">
+          <li class="company__item company__item-address">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+          <li class="company__item company__item-phone">
+            <a
+              href="tel:+6281273134321"
+              class="company__link"
+            >+62-812-7313-4321
+            </a>
+          </li>
+          <li class="company__item company__item-email">
+            <a
+              href="mailto:hello.afrian@gmail.com"
+              class="company__link"
+            >hello.afrian@gmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__navigation-block footer__block-about ">
+        <h3 class="footer__subtitle">About US</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >About
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >What We Do
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >Project
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >How It Work With Us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__navigation-block footer__block-follow">
+        <h3 class="footer__subtitle">Follow US</h3>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >Instagram
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >Facebook
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >LinkedIn
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              href=""
+              class="footer__link"
+            >Youtube
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__subtext">2019 © Afrianska. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script
+  type="module"
+  src="./src/js/main.js"
+></script>
 </body>
 
 </html>
