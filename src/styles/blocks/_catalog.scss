@@ -1,167 +1,192 @@
+@use './variables' as *;
+
 .catalog {
   padding: 192px 80px 212px;
-}
-.catalog__container {
-  padding: 0 0 0 81px;
-  max-width: 940px;
-  position: relative;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
 
-.catalog__title {
-  left: 0;
-  margin: 0;
-  position: absolute;
-  top: 0;
-  max-width: 360px;
-  font-size: 36px;
-  font-family: Gilroy;
-  font-weight: 600;
-  line-height: 128%;
-  letter-spacing: 0.05em;
-  color: #316099;
-}
-.catalog__list {
-  gap: 100px;
-  display: grid;
-  grid-template-columns: repeat(2, calc(50% - 50px));
-  grid-template-rows: repeat(2, auto);
-}
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.card {
-  padding: 48px 47px;
-  border-radius: 10px;
-  box-shadow: 5px 20px 50px rgba(16, 112, 177, .2);
-  margin: 0 auto;
-  max-width: 380px;
-  position: relative;
-}
-.card__business {
-  display: grid;
-  align-self: center;
-  grid-area: 1 / 1 / 3 / 2;
-  margin: 0 auto 33px;
-}
-.card__wrapper {
-  background-color: transparent;
-  position: relative;
-  z-index: 10;
-}
-
-.card__image {
-  display: block;
-  max-width: 100%;
-}
-.card__image-business {
-  height: 132px;
-  margin: 0  0 56px 16px;
-  width: 192px;
-
-}
-.card__title {
-  margin: 0 0 16px;
-  font-family: Gilroy;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 150%;
-  letter-spacing: 0.05em;
-  color: #1f3f68;
-}
-.card__text {
-  margin: 0 0 31px;
-  font-family: Gilroy;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 162%;
-  letter-spacing: 0.05em;
-  color: #1f3f68;
-  opacity: .6;
-}
-.card__link {
-  column-gap: 24px;
-  display: flex;
-  font-size: 14px;
-  letter-spacing: .05em;
-  line-height: 30px;
-  min-width: 127px;
-  transition: color .3s ease-in-out;
-  text-decoration: none;
-}
-.card__link-text {
-  font-family: Gilroy;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 214%;
-  letter-spacing: 0.05em;
-  color: #5a98d0;
-}
-.card__link-icon {
-  margin: 3px 0 0;
-  width: 40px;
-  height: 40px;
-}
-.card__image-technology {
-  height: 208px;
-  margin: -70px auto 28px;
-  width: 255px;
-}
-.card__image-product {
-  height: 132px;
-  margin: 0 auto 56px;
-  width: 171px;
-  justify-content: center;
-}
-
-@media(max-width: 400px) {
-  .catalog {
-    padding: 82px 30px 81px;
-  }
-  .catalog__container {
-    margin: 0 auto;
+  &__container {
+    padding: 0 0 0 81px;
     max-width: 940px;
-    padding: 0;
     position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
-  .catalog__title {
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: .05em;
-    line-height: 37px;
-    margin: 0 0 40px;
-    max-width: 360px;
-  }
-  .catalog__list {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: auto;
-    padding-top: 150px;
-  }
-  .card {
-    padding: 40px;
-  }
-  .card__business {
-    align-self: center;
-    grid-area: 1 / 1 / 3 / 2;
-    margin: 0 auto 33px;
-  }
-}
-@media (max-width: 700px) {
-  .catalog {
-    padding: 80px 30px 80px;
-  }
-  .catalog__list {
-    gap: 70px;
-    display: grid;
-    grid-template-columns: auto;
-    padding-top: 150px;
-  }
-  .catalog__container {
-    padding: 0;
+
+  &__title {
+    left: 0;
     margin: 0;
+    position: absolute;
+    top: 0;
+    max-width: 360px;
+    font-size: 36px;
+    font-family: $font-gilroy;
+    font-weight: 600;
+    line-height: 128%;
+    letter-spacing: 0.05em;
+    color: $color-bg-dark-blue;
+  }
+
+  &__list {
+    gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 50px));
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .card {
+    padding: 48px 47px;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    margin: 0 auto;
+    max-width: 380px;
+    position: relative;
+
+    &__business {
+      display: grid;
+      align-self: center;
+      grid-area: 1 / 1 / 3 / 2;
+      margin: 0 auto 33px;
+    }
+
+    &__wrapper {
+      background-color: transparent;
+      position: relative;
+      z-index: 10;
+    }
+
+    &__image {
+      display: block;
+      max-width: 100%;
+
+      &-business {
+        height: 132px;
+        margin: 0 0 56px 16px;
+        width: 192px;
+      }
+
+      &-technology {
+        height: 208px;
+        margin: -70px auto 28px;
+        width: 255px;
+      }
+
+      &-product {
+        height: 132px;
+        margin: 0 auto 56px;
+        width: 171px;
+        justify-content: center;
+      }
+    }
+
+    &__title {
+      margin: 0 0 16px;
+      font-family: $font-gilroy;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.05em;
+      color: $color-secondary;
+    }
+
+    &__text {
+      margin: 0 0 31px;
+      font-family: $font-gilroy;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 162%;
+      letter-spacing: 0.05em;
+      color:$color-secondary;
+      opacity: 0.6;
+    }
+
+    &__link {
+      column-gap: 24px;
+      display: flex;
+      font-size: 14px;
+      letter-spacing: 0.05em;
+      line-height: 30px;
+      min-width: 127px;
+      color: $color-primary;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out, transform 0.7s ease-in-out;
+
+
+      &__link:hover {
+      color: $color-secondary;
+        transform: scale(1.1);
+
+    }
+      &-text {
+        font-family: $font-gilroy;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 214%;
+        letter-spacing: 0.05em;
+        color: $color-primary;
+        transition: color 0.3s ease-in-out, transform 0.7s ease-in-out;
+      }
+
+      &-icon {
+        margin: 3px 0 0;
+        width: 40px;
+        height: 40px;
+        transition: color 0.3s ease-in-out, transform 0.7s ease-in-out;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    padding: 82px 30px 81px;
+
+    &__container {
+      margin: 0 auto;
+      max-width: 940px;
+      padding: 0;
+      position: relative;
+    }
+
+    &__title {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      line-height: 37px;
+      margin: 0 0 40px;
+      max-width: 360px;
+    }
+
+    &__list {
+      display: grid;
+      gap: 50px;
+      grid-template-columns: auto;
+      padding-top: 150px;
+    }
+
+    .card {
+      padding: 40px;
+
+      &__business {
+        align-self: center;
+        grid-area: 1 / 1 / 3 / 2;
+        margin: 0 auto 33px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 80px 30px 80px;
+
+    &__list {
+      gap: 70px;
+      display: grid;
+      grid-template-columns: auto;
+      padding-top: 150px;
+    }
+
+    &__container {
+      padding: 0;
+      margin: 0;
+    }
   }
 }

@@ -85,9 +85,29 @@
         />
       </clipPath>
     </defs>
+  </symbol>
 </svg>
-</symbol>
+<svg style="display: none;">
+  <symbol
+    id="close"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <line
+      x1="18"
+      y1="6"
+      x2="6"
+      y2="18"
+    />
+    <line
+      x1="6"
+      y1="6"
+      x2="18"
+      y2="18"
+    />
+  </symbol>
 </svg>
+
 <svg style="display: none;">
   <symbol
     id="arrow"
@@ -166,7 +186,7 @@
           <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a
             class="card__link"
-            href="#noscroll"
+            href="#"
           >
             <span class="card__link-text">Learn more</span>
             <svg class="card__link-icon">
@@ -355,9 +375,87 @@
     </div>
   </div>
 </footer>
+<div
+  class="modal"
+  id="modal"
+>
+  <div
+    class="modal__overlay"
+    id="modalOverlay"
+  ></div>
+  <div class="modal__content">
+    <h2 class="modal__title">SEND US MESSAGE</h2>
+    <button
+      class="modal__close"
+      id="modalClose"
+    >
+      <svg class="modal__cross">
+        <use href="#close"></use>
+      </svg>
+    </button>
+    <form class="modal__form">
+      <ul class="modal__list">
+        <li class="modal__item">
+          <label
+            for="modal-name"
+            class="modal__label"
+          >Full Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            class="modal__input"
+            id="modal-name"
+            placeholder="Your Name"
+          >
+        </li>
+        <li class="modal__item">
+          <label
+            for="modal-email"
+            class="modal__label"
+          >Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            class="modal__input"
+            id="modal-email"
+            placeholder="Your Email"
+          >
+        </li>
+        <li class="modal__item">
+          <label
+            for="modal-message"
+            class="modal__label"
+          >Message
+          </label>
+          <textarea
+            type="email"
+            name="message"
+            class="modal__textarea"
+            id="modal-message"
+            placeholder="Your Message"
+          ></textarea>
+        </li>
+      </ul>
+      <button
+        class="modal__button-submit"
+        type="submit"
+      >SUBMIT</button>
+    </form>
+  </div>
+</div>
 <script
   type="module"
   src="./src/js/main.js"
+></script>
+<script
+  type="module"
+  src="./src/js/burger.js"
+></script>
+<script
+  type="module"
+  src="./src/js/modal.js"
 ></script>
 </body>
 

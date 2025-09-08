@@ -1,7 +1,9 @@
+@use './variables' as *;
+
 .work {
   padding: 0 80px;
-  background-color: #5a98d0;
-  color: #fff;
+  background-color: $color-primary;
+  color: $color-white;
   position: relative;
 
   &::before {
@@ -11,7 +13,7 @@
     left: -96px;
     width: 100%;
     height: 100%;
-    background: #316099;
+    background: $color-bg-dark-blue;
     border-radius: 0 200px 0 0;
   }
 
@@ -26,7 +28,7 @@
     z-index: 10;
 
     &::after {
-      background-color: #fff;
+      background-color: $color-white;
       bottom: 0;
       content: "";
       height: 1px;
@@ -46,22 +48,22 @@
   &__title {
     max-width: 340px;
     margin: 0 0 32px;
-    font-family: Gilroy, serif;
+    font-family: $font-gilroy;
     font-weight: 600;
     font-size: 36px;
     line-height: 128%;
     letter-spacing: 0.05em;
-    color: #fff;
+    color: $color-white;
   }
 
   &__text {
     margin: 0;
-    font-family: Gilroy, serif;
+    font-family: $font-gilroy;
     font-weight: 400;
     font-size: 16px;
     line-height: 162%;
     letter-spacing: 0.05em;
-    color: #fff;
+    color: $color-white;
     opacity: 0.6;
   }
 
@@ -72,14 +74,13 @@
     min-width: 220px;
     min-height: 56px;
     padding: 15px;
-
-    background-color: #5a98d0;
+    transition: background-color 0.3s ease-in-out;
+    background-color: $color-primary;
     border: 0;
     border-radius: 10px;
     box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
-    color: #fff;
-
-    font-family: Gilroy, serif;
+    color: $color-white;
+    font-family: $font-gilroy;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -88,30 +89,30 @@
     text-transform: capitalize;
     cursor: pointer;
   }
-}
-@media (max-width: 450px) {
-  .work {
+  &__button:hover {
+    background-color: $color-secondary;
+  }
+
+  @media (max-width: 450px) {
     padding: 0 30px;
-  }
-  .work:before {
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-  .work__container {
-    padding: 41px 30px 48px 0;
-  }
-  .work__title {
-    font-size: 30px;
-  }
-  .footer__navigation {
-    row-gap: 45px;
-  }
 
+    &::before {
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+
+    &__container {
+      padding: 41px 30px 48px 0;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+  }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 450px), (max-width: 750px) {
   .footer__navigation {
     row-gap: 45px;
   }

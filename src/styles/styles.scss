@@ -3,6 +3,7 @@
 @use "blocks/clients";
 @use "blocks/work";
 @use "blocks/footer";
+@use "blocks/modal";
 
 
 @font-face {
@@ -26,12 +27,17 @@
   font-style: normal;
   font-display: swap;
 }
+
 * {
   margin:  0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .container {
   max-width: 1260px;
   width: 100%;

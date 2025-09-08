@@ -1,23 +1,51 @@
+@use './variables' as *;
 .header {
   margin: 0 auto;
   padding-top: 40px;
-}
-.header__navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-}
-.header__image {
-  width: 48px;
-  height: 48px;
-}
-.header__burger {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+  }
+
+  &__image {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__burger {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+
+    &::before,
+    &::after,
+    span {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: $color-primary-dark;
+    }
+
+    &::before { top: 0; }
+    span       { top: 7px; }
+    &::after  { top: 14px; }
+  }
 }
 .header__button {
   position: relative;
@@ -26,6 +54,7 @@
   width: 24px;
   height: 16px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   &::before,
   &::after,
@@ -35,149 +64,173 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: #356EAD;
+    background: $color-primary-dark;
+    transition: all 0.3s ease;
   }
 
-  &::before {
-    top: 0;
-  }
+  &::before { top: 0; }
+  span       { top: 7px; }
+  &::after  { top: 14px; }
 
-  span {
-    top: 7px;
-  }
-
-  &::after {
-    top: 14px;
+  &.active {
+    &::before {
+      transform: rotate(45deg);
+      top: 7px;
+    }
+    span {
+      opacity: 0;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      top: 7px;
+    }
   }
 }
+
 .hero {
   position: relative;
   overflow: hidden;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, #98c3e8 28.39%, rgba(152, 195, 232, 0) 100%);
-  opacity: 0.2; /* прозрачность только у фона */
-  z-index: 0;
-}
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        #98c3e8 28.39%,
+        rgba(152, 195, 232, 0) 100%
+    );
+    opacity: 0.2;
+    z-index: 0;
+  }
 
-.hero__content {
-  position: relative;
-  z-index: 1;
-}
-.hero__container {
-  padding-top: 90px;
-  padding-left: 130px;
-  display: flex;
-  max-width: 1130px;
-}
-.hero__info {
-  display: flex;
-  flex-direction: column;
-}
-.hero__info__title {
-  width: 520px;
-  line-height: 116%;
-  font-size: 64px;
-  font-family: "Galien";
-  color: #1F3F68;
-  letter-spacing: 0.04em;
-  padding-bottom: 32px;
-}
-.hero__subtitle {
-  width: 425px;
-  font-family: "Gilroy";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 162%;
-  letter-spacing: 0.05em;
-  color: #1f3f68;
-  padding-bottom: 71px;
-}
-.hero__button {
-  font-family: Gilroy;
-  border-radius: 10px;
-  width: 220px;
-  height: 56px;
-  background-color: #5A98D0;
-  color: #FFFFFF;
-  font-size: 16px;
-  line-height: 162%;
-  letter-spacing: 0.04em;
-  text-align: center;
-  text-transform: capitalize;
-  border: 0;
-  box-shadow: 5px 10px 20px 0 rgba(53, 110, 173, 0.2);
-  cursor: pointer;
-}
-.hero__illustration {
-  max-height: 613px;
-  display: block;
-  max-width: 100%;
-  position: relative;
-  top: -100px;
-  right: 60px
-}
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
 
+  &__container {
+    padding-top: 90px;
+    padding-left: 130px;
+    display: flex;
+    max-width: 1130px;
+  }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
 
+    &__title {
+      width: 520px;
+      line-height: 116%;
+      font-size: 64px;
+      font-family: $font-galien;
+      color: $color-secondary;
+      letter-spacing: 0.04em;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__subtitle {
+    width: 425px;
+    font-family: $font-gilroy;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.05em;
+    color: #1f3f68;
+    padding-bottom: 71px;
+    opacity: 0.6;
+  }
+
+  &__button {
+    font-family: $font-gilroy;
+    border-radius: 10px;
+    width: 220px;
+    height: 56px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-size: 16px;
+    line-height: 162%;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: capitalize;
+    border: 0;
+    box-shadow: 5px 10px 20px 0 rgba(53, 110, 173, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  &__button:hover {
+    background-color: $color-secondary;
+  }
+
+  &__illustration {
+    max-height: 613px;
+    display: block;
+    max-width: 100%;
+    position: relative;
+    top: -100px;
+    right: 60px;
+  }
+}
 
 @media (max-width: 1024px) {
-  .hero__container {
-    padding-left: 40px;
-    padding-right: 40px;
-    gap: 20px;
-  }
-  .hero__info__title {
-    font-size: 48px;
-    width: 100%;
-  }
-  .hero__subtitle {
-    width: 100%;
-  }
-  .hero__illustration {
-    max-height: 400px;
-    top: 0;
-    right: 0;
+  .hero {
+    &__container {
+      padding-left: 40px;
+      padding-right: 40px;
+      gap: 20px;
+    }
+    &__info__title {
+      font-size: 48px;
+      width: 100%;
+    }
+    &__subtitle {
+      width: 100%;
+    }
+    &__illustration {
+      max-height: 400px;
+      top: 0;
+      right: 0;
+    }
   }
 }
+
 @media (max-width: 700px) {
-  .hero__container {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 40px 20px;
+  .hero {
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    &__info__title {
+      font-size: 36px;
+      padding-bottom: 32px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      padding-bottom: 40px;
+    }
+    &__button {
+      width: 100%;
+      max-width: 280px;
+    }
+    &__illustration {
+      display: none;
+    }
   }
 
-  .hero__info__title {
-    font-size: 36px;
-    padding-bottom: 32px;
-  }
-
-  .hero__subtitle {
-    font-size: 16px;
-    padding-bottom: 40px;
-  }
-
-  .hero__button {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .hero__illustration {
-    display: none;
-  }
-
-  .header__navigation {
-    padding: 0 15px;
+  .header {
+    &__navigation {
+      padding: 0 15px;
+    }
   }
 }
 
 @media (max-width: 400px) {
-  .hero__info__title {
-    font-size: 40px;
+  .hero {
+    &__info__title {
+      font-size: 40px;
+    }
   }
-
 }
